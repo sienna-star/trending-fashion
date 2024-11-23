@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Online Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .product {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            width: 250px;
+            border-radius: 5px;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+        .product h3 {
+            font-size: 18px;
+            color: #333;
+        }
+        .product p {
+            font-size: 16px;
+            color: #777;
+        }
+        .product .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+        .product button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .product button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to trending fashion</h1>
+        <p>Your favorite place to shop for cool products!</p>
+    </header>
+
+    <div class="container">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="https://via.placeholder.com/250" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>A great product for everyone.</p>
+            <p class="price">$19.99</p>
+            <button onclick="addToCart('Product 1', 19.99)">Buy Now</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="https://via.placeholder.com/250" alt="Product 2">
+            <h3>Product 2</h3>
+            <p>This is an amazing product!</p>
+            <p class="price">$29.99</p>
+            <button onclick="addToCart('Product 2', 29.99)">Buy Now</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="https://via.placeholder.com/250" alt="Product 3">
+            <h3>Product 3</h3>
+            <p>A must-have for every home.</p>
+            <p class="price">$39.99</p>
+            <button onclick="addToCart('Product 3', 39.99)">Buy Now</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Online Store | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        let cart = [];
+
+        function addToCart(productName, price) {
+            cart.push({ productName, price });
+            alert(productName + " has been added to your cart!");
+            console.log(cart);  // You can use this to see the cart in your browser's console.
+        }
+    </script>
+
+</body>
+</html>
